@@ -5,12 +5,12 @@ const menuItems = document.querySelectorAll('.header .menu a');
 const summaryItems = document.querySelectorAll('.summary a');
 const headerHeight = document.querySelector('#header').offsetHeight;
 
-menuItems.forEach(item => {
-    item.addEventListener('click', scrollToIdOnClick);
-});
-summaryItems.forEach(item => {
-    item.addEventListener('click', scrollToIdOnClick);
-});
+// menuItems.forEach(item => {
+//     item.addEventListener('click', scrollToIdOnClick);
+// });
+// summaryItems.forEach(item => {
+//     item.addEventListener('click', scrollToIdOnClick);
+// });
 
 function scrollToIdOnClick(event){
     event.preventDefault();
@@ -34,11 +34,13 @@ function scrollToIdOnClick(event){
 const svg = document.querySelectorAll(".st0");
 const menu = document.querySelector("#menu");
 const hamburger = document.querySelector(".hamburger");
+const menuMobile = document.querySelector('.menu-mobile');
+const itemMenuMobile = document.querySelectorAll('.menu-mobile .body a');
 
 document.onscroll = () => {
     const hello = document.querySelector("#hello").offsetTop;
     const about = document.querySelector("#about").offsetTop;
-    const services = document.querySelector("#services").offsetTop;
+    // const services = document.querySelector("#services").offsetTop;
     const customers = document.querySelector("#customers").offsetTop;
 
     if(window.scrollY >= hello && window.scrollY < about){
@@ -50,17 +52,9 @@ document.onscroll = () => {
         menu.classList.remove('menu-white');
         hamburger.classList.remove('hamburger-light');
     }
-    else if(window.scrollY >= about && window.scrollY < services){
+    else if(window.scrollY >= about && window.scrollY < customers){
         svg.forEach(object => {
             object.style.fill = '#001400';
-        })
-        menu.classList.add('menu-white');
-        menu.classList.remove('menu');
-        hamburger.classList.add('hamburger-light');
-    }
-    else if(window.scrollY >= services && window.scrollY < customers){
-        svg.forEach(object => {
-            object.style.fill = '#CCFF33';
         })
         menu.classList.add('menu-white');
         menu.classList.remove('menu');
@@ -79,3 +73,14 @@ document.onscroll = () => {
 function openCard(element){
     element.classList.toggle('actived');
 }
+
+function openMenu(){
+    menuMobile.style.display = 'flex';
+}
+
+function closeMenu(){
+    menuMobile.style.display = 'none';
+}
+
+closeMenu();
+

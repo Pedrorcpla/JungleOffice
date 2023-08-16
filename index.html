@@ -69,16 +69,32 @@
         <div class="menu" id="menu">
             <a href="#hello">Home</a>
             <a href="#about">Sobre</a>
-            <a href="#services">Serviços</a>
+            <!-- <a href="#services">Serviços</a> -->
+            <a href="./produtos.html">Produtos</a>
             <a href="#customers">Clientes</a>
             <a href="#contact">Contato</a>
         </div>
-        <button class="hamburger">
+        <button class="hamburger" onclick="openMenu()">
             <div class="bar" id="bar"></div>
             <div class="bar bar-mid" id="bar"></div>
             <div class="bar" id="bar"></div>
         </button>
     </header>
+    
+    <!-- Menu lateral mobile -->
+    <div class="menu-mobile">
+        <div class="header">
+            <button onclick="closeMenu()">X</button>
+        </div>
+        <div class="body">
+            <a href="#hello">Home</a>
+            <a href="#about">Sobre</a>
+            <!-- <a href="#services">Serviços</a> -->
+            <a href="./produtos.html">Produtos</a>
+            <a href="#customers">Clientes</a>
+            <a href="#contact">Contato</a>
+        </div>
+    </div>
 
     <section class="hello" id="hello">
         <img class="mato" src="../img/mato.png">
@@ -86,21 +102,30 @@
     </section>
 
     <section class="summary">
+        <!-- <a href="" class="products">VEJA NOSSOS PRODUTOS</a> -->
         <div class="space">
             <div class="box">
                 <span></span>
                 <div class="content">
                     <h2>Sobre nós</h2>
-                    <p>- Por que escolhemos esse nome?<br>- Qual nossa área de atuação?<br>- Desde quando estamos no mercado?<br>- Qual é nosso objetivo?</p>
-                    <a href="#about">Veja Mais</a>
+                    <p>Por que escolhemos esse nome? Qual nossa área de atuação? Desde quando estamos no mercado? Qual é nosso objetivo?</p>
+                    <a href="#about">NOSSA FAMÍLIA</a>
                 </div>
             </div>
-            <div class="box">
+            <!-- <div class="box">
                 <span></span>
                 <div class="content">
                     <h2>Serviços</h2>
                     <p>A equipe Jungle Office é composta por diagramadores, ilustradores, designers e desenvolvedores web.<br> Venha conferir o que podemos fazer por você!</p>
                     <a href="#services">Veja Mais</a>
+                </div>
+            </div> -->
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Produtos</h2>
+                    <p>Nossa família Jungle Office tem muito a oferecer para diferentes públicos.<br> Venha conferir tudo o que oferecemos à você!</p>
+                    <a href="./produtos.html">NOSSOS PRODUTOS</a>
                 </div>
             </div>
             <div class="box">
@@ -108,13 +133,13 @@
                 <div class="content">
                     <h2>Clientes</h2>
                     <p>Ao longo de nossa jornada, conquistamos diversos clientes de grande influência no mercado. Veja quem são eles e em quais áreas eles atuam!</p>
-                    <a href="#customers">Veja Mais</a>
+                    <a href="#customers">NOSSOS CLIENTES</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <button class="about card" id="about" onclick="openCard(this)">
+    <button class="about card actived" id="about">
         <div class="text-dark">
             <h2>SOBRE NÓS...</h2>
             <p>
@@ -144,7 +169,7 @@
         </div>
     </button>
 
-    <button class="services card" id="services" onclick="openCard(this)">
+    <!-- <button class="services card" id="services" onclick="openCard(this)">
         <div class="text">
             <h2>SERVIÇOS...</h2>
             <p>
@@ -165,14 +190,14 @@
                 Com o desejo de atingirmos com excelência o mercado, estamos em treinamento contínuo para melhor atender nossos clientes!
             </p>
         </div>
-    </button>
+    </button> -->
 
-    <button class="customers card" id="customers" onclick="openCard(this)">
+    <button class="customers card actived" id="customers">
         <div class="content">
             <h2>CLIENTES...</h2>
             <p>Conheça alguns de nossos clientes:</p>
             <div class="row">
-                <img src="https://escolachefgourmet.com.br/images/icons/logo.png">
+                <img src="https://static.wixstatic.com/media/36a6bd_f72a6ec4cc7c49a7b197b60690bd49d3~mv2.png/v1/fill/w_181,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo.png 1x, https://static.wixstatic.com/media/36a6bd_f72a6ec4cc7c49a7b197b60690bd49d3~mv2.png/v1/fill/w_362,h_136,al_c,lg_1,q_85,enc_auto/logo.png">
                 <img src="https://vemserhappy.com.br/uploads/logo.svg">
                 <img src="https://bookerfield.com/img/logoLogin.png">
                 <img src="https://cdn.shortpixel.ai/spai/ret_img/https://jumpercursos.com.br/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/07/Jumper_fundo_escuro.png.webp">
